@@ -1,11 +1,12 @@
 import re 
   
-expression = re.compile(r"[A-Z][A-Z][A-Z]\d\d\d\d[a-z][a-z][a-z][^a-zA-Z0-9@][^a-zA-Z0-9@][^a-zA-Z0-9@][@]$")
-pASS="ABB1111abc#?/@"
+expression = re.compile(r"[A-Z][A-Z][A-Z]\d\d\d\d[a-z][a-z][a-z](@hotmail.com)[^a-zA-Z0-9@][^a-zA-Z0-9@][^a-zA-Z0-9@][@]$")
+pASS=input("Ingrese una contraseña: ")
 pat=re.compile(expression)
-mat=re.search(pat,pASS)
+validator=re.search(pat,pASS)
 
-if mat:
+if validator:
     print("\nPassword correcta.\n")
 else:
-    print("\nPassword incorrecta.\n")
+
+print("\nPassword incorrecta.\n")
